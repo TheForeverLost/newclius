@@ -1,6 +1,6 @@
 # NEWCLIUS
 
-**Work in progress**
+__Work in progress__
 
 Maded Due to unavailability of AWS codestar in the ap-south-1 region as of 14/02/20 
 newclius Command line tool will help you make aws codepipelines to connect your codecommit repos to wherever they are being deployed 
@@ -32,10 +32,11 @@ After creating the resources that are to be shared between (future version will 
 ```bash
 newclius setup
 ```
-run newclius help command to get the usage document 
+run newclius command to get the usage document 
 ```bash
-newclius help
+newclius
 ```
+![newclius](Screenshot.png)
 
 ## Information
 
@@ -44,16 +45,16 @@ Before using newclius, a few things to be kept in mind
     2. It is recommended you have some prior knowledge of AWS CodeSuite
 
 Helpful links
-    - https://docs.aws.amazon.com/ec2/?id=docs_gateway
-    - https://docs.aws.amazon.com/s3/?id=docs_gateway
-    - https://docs.aws.amazon.com/apigateway/?id=docs_gateway
-    - https://docs.aws.amazon.com/lambda/?id=docs_gateway
-    - https://docs.aws.amazon.com/codebuild/?id=docs_gateway
-    - https://docs.aws.amazon.com/codedeploy/?id=docs_gateway
-    - https://docs.aws.amazon.com/codepipeline/?id=docs_gateway
-    - https://docs.aws.amazon.com/iam/?id=docs_gateway
+- https://docs.aws.amazon.com/ec2/?id=docs_gateway
+- https://docs.aws.amazon.com/s3/?id=docs_gateway
+- https://docs.aws.amazon.com/apigateway/?id=docs_gateway
+- https://docs.aws.amazon.com/lambda/?id=docs_gateway
+- https://docs.aws.amazon.com/codebuild/?id=docs_gateway
+- https://docs.aws.amazon.com/codedeploy/?id=docs_gateway
+- https://docs.aws.amazon.com/codepipeline/?id=docs_gateway
+- https://docs.aws.amazon.com/iam/?id=docs_gateway
 
 ### features upcoming in future updates
 
-- support for github repos
+- Support for github repos
 - Automatic creation of shared resources

@@ -22,7 +22,7 @@ newclius Command line tool will help you make aws codepipelines to connect your 
 
 Clone repository 
 ```bash
-git clone https://git-codecommit.ap-south-1.amazonaws.com/v1/repos/newclius 
+git clone https://github.com/TheForeverLost/newclius 
 ```
 Switch current directory to the directory where newclius repository has been cloned and run the setup script
 ```bash
@@ -39,17 +39,19 @@ newclius help
 
 ## Information
 
-before using newclius, a few things to be kept in mind
+Before using newclius, a few things to be kept in mind
     1. Newclius is not covering for your cost for aws resources
     2. It is recommended you have some prior knowledge of AWS CodeSuite
-        - https://docs.aws.amazon.com/ec2/?id=docs_gateway
-        - https://docs.aws.amazon.com/s3/?id=docs_gateway
-        - https://docs.aws.amazon.com/apigateway/?id=docs_gateway
-        - https://docs.aws.amazon.com/lambda/?id=docs_gateway
-        - https://docs.aws.amazon.com/codebuild/?id=docs_gateway
-        - https://docs.aws.amazon.com/codedeploy/?id=docs_gateway
-        - https://docs.aws.amazon.com/codepipeline/?id=docs_gateway
-        - https://docs.aws.amazon.com/iam/?id=docs_gateway
+
+Helpful links
+    - https://docs.aws.amazon.com/ec2/?id=docs_gateway
+    - https://docs.aws.amazon.com/s3/?id=docs_gateway
+    - https://docs.aws.amazon.com/apigateway/?id=docs_gateway
+    - https://docs.aws.amazon.com/lambda/?id=docs_gateway
+    - https://docs.aws.amazon.com/codebuild/?id=docs_gateway
+    - https://docs.aws.amazon.com/codedeploy/?id=docs_gateway
+    - https://docs.aws.amazon.com/codepipeline/?id=docs_gateway
+    - https://docs.aws.amazon.com/iam/?id=docs_gateway
 
 ### features upcoming in future updates
 

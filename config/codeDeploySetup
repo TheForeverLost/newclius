@@ -1,0 +1,14 @@
+#!/bin/bash
+cd ~
+if [ -x "install" ] 
+then
+sudo ./install auto
+else
+sudo apt-get install ruby
+sudo apt-get install wget
+wget https://aws-codedeploy-ap-south-1.s3.ap-south-1.amazonaws.com/latest/install
+chmod +x ./install
+sudo ./install auto
+fi
+sudo service codedeploy-agent start
+echo "exit from SSH by typing exit command to continue with CICD process"

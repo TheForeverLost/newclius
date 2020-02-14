@@ -1,0 +1,35 @@
+{
+    "applicationName": "_APP_",
+    "deploymentGroupName": "_APP_-prod",
+    "deploymentConfigName": "CodeDeployDefault.AllAtOnce",
+    "serviceRoleArn": "arn:aws:iam::864933564632:role/CiCdTesting",
+    "alarmConfiguration": {
+        "enabled": false,
+        "ignorePollAlarmFailure": false,
+        "alarms": []
+    },
+    "autoRollbackConfiguration": {
+        "enabled": true,
+        "events": [
+            "DEPLOYMENT_FAILURE"
+        ]
+    },
+    "deploymentStyle": {
+        "deploymentType": "IN_PLACE",
+        "deploymentOption": "WITHOUT_TRAFFIC_CONTROL"
+    },
+    "ec2TagSet": {
+        "ec2TagSetList": [
+            [
+                {
+                    "Key": "_TAG_",
+                    "Value": "prod",
+                    "Type": "KEY_AND_VALUE"
+                }
+            ]
+        ]
+    },
+    "onPremisesTagSet": {
+        "onPremisesTagSetList": []
+    }
+}

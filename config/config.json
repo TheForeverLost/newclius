@@ -1,0 +1,14 @@
+{
+    "roles":{
+        "PipelineRole" : "enter_pipeline_role _arn",
+        "BuildRole" : "enter_build_role_arn",
+        "CloudFormationRole" : "enter_cloudformation_role_arn",
+        "LambdaExec" : "enter_lambda_role"
+    },
+    "resources":{
+        "s3ArtifactStore" : "enter_s3_bucket_name_where_artifacts_will_be_stored",
+        "s3CodeStorage" : "enter_code_storage_bucket_name",
+        "EC2IAMProfile" : "enter_EC2_instance_security_profile_name",
+        "Serverlessbuild" : "enter_name_of_codebuild_project_with_extra_lambda_permissions"
+    }
+}

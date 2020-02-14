@@ -1,0 +1,43 @@
+#!/bin/bash
+error(){
+    echo "Dependencies Automatic install failed"
+    echo "Please install : yq , jq , python3.6 or above , pip3"
+    exit
+}
+
+sudo apt update && \
+sudo apt-get install jq && \
+sudo apt install snap && \
+sudo snap install yq && \
+sudo apt-get -y install python3-pip && \
+pip3 install awscli --upgrade --user || error
+    
+command -v python > /dev/null 2>&1 || error 
+command -v aws > /dev/null 2>&1 || error 
+command -v jq > /dev/null 2>&1 || error
+command -v yq > /dev/null 2>&1 || error 
+echo "Dependencies fulfilled"
+
+[ -d /usr/local/bin/newclius ] || sudo mkdir /usr/local/bin/newclius 
+[ -d /usr/local/bin/newclius/local ] || sudo mkdir /usr/local/bin/newclius/local
+sudo cp src/newclius.sh /usr/local/bin/newclius/
+sudo cp -r config /usr/local/bin/newclius/ 
+grep -q -rl "newclius" ~/.bashrc || $( echo "alias newclius='/usr/local/bin/newclius/newclius.sh'" >> ~/.bashrc ) 
+source ~/.bashrc
+
+aws configure
+echo
+echo "Before we start with newclius , we will need to make some resources that can be shared between the pipelines"
+echo
+echo "1. Make a pipeline execution IAM role "
+echo "2. Make a codebuild role for base codebuild permissions "
+echo "3. Make a codebuid role with codebuild as well lambda permissions"
+echo "4. Make a codebuild project called serverlessdeploy with the codebuild role mentioned above"
+echo "5. Make a S3 bucket for pipeline artifact storage"
+echo "6. Make a s3 bucket for code storage"
+echo "7. Make a cloudformation IAM role"
+echo "8. Make a Ec2 Instance profile for codedeploy "
+echo
+echo "Once you make the above resources run "
+echo "$ newclius setup"
+

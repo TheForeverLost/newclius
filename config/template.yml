@@ -1,0 +1,20 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: ""
+Resources:
+  deviceStatusPublish:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: index.handler
+      Runtime: nodejs12.x
+      Events:
+        RunApi:
+          Type: Api
+          Properties:
+            Path: /
+            Method: ANY
+        ProxyRunApi:
+          Type: Api
+          Properties:
+            Path: /
+            Method: ANY
